@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xcode-icon-red" translatesAutoresizingMaskIntoConstraints="NO" id="eJW-Cx-too">
+                                <rect key="frame" x="180" y="63" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="KBb-Bd-i4y"/>
+                                    <constraint firstAttribute="height" constant="128" id="e9H-SG-7oL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xcode-icon-red" translatesAutoresizingMaskIntoConstraints="NO" id="OnJ-pW-B0z">
+                                <rect key="frame" x="180" y="228" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="F7O-Eo-K44"/>
+                                    <constraint firstAttribute="height" constant="128" id="cHt-Hr-TLG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xcode-icon-red" translatesAutoresizingMaskIntoConstraints="NO" id="LHf-Tz-S4p">
+                                <rect key="frame" x="180" y="393" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="XuQ-5w-Qyj"/>
+                                    <constraint firstAttribute="height" constant="128" id="t4c-5j-r9F"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcn-94-LjY">
+                                <rect key="frame" x="254" y="109" width="92" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Click Here">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="topTestClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Pd-T7-2zc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7D-qZ-mHz">
+                                <rect key="frame" x="254" y="274" width="92" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Click Here">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="centerTestClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4uC-2J-ZiX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkO-Mj-xKb">
+                                <rect key="frame" x="254" y="439" width="92" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Click Here">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bottomTestClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="drq-Gl-Q2N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eJW-Cx-too" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="Heu-cl-hab"/>
+                            <constraint firstItem="LHf-Tz-S4p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q8u-l9-vze"/>
+                            <constraint firstItem="lcn-94-LjY" firstAttribute="centerX" secondItem="eJW-Cx-too" secondAttribute="centerX" id="RjG-ks-O17"/>
+                            <constraint firstItem="lcn-94-LjY" firstAttribute="centerY" secondItem="eJW-Cx-too" secondAttribute="centerY" id="ZLm-1O-RUQ"/>
+                            <constraint firstItem="LHf-Tz-S4p" firstAttribute="centerY" secondItem="YkO-Mj-xKb" secondAttribute="centerY" id="bkT-32-FBC"/>
+                            <constraint firstItem="T7D-qZ-mHz" firstAttribute="centerX" secondItem="OnJ-pW-B0z" secondAttribute="centerX" id="frM-fa-Qpv"/>
+                            <constraint firstItem="OnJ-pW-B0z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hIK-1r-IGY"/>
+                            <constraint firstItem="eJW-Cx-too" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hKX-OW-kZD"/>
+                            <constraint firstItem="LHf-Tz-S4p" firstAttribute="centerX" secondItem="YkO-Mj-xKb" secondAttribute="centerX" id="hcP-lf-9lH"/>
+                            <constraint firstItem="OnJ-pW-B0z" firstAttribute="top" secondItem="eJW-Cx-too" secondAttribute="bottom" constant="37" id="q4c-UG-gNf"/>
+                            <constraint firstItem="LHf-Tz-S4p" firstAttribute="top" secondItem="OnJ-pW-B0z" secondAttribute="bottom" constant="37" id="qqG-eq-hAG"/>
+                            <constraint firstItem="T7D-qZ-mHz" firstAttribute="centerY" secondItem="OnJ-pW-B0z" secondAttribute="centerY" id="uO3-jp-zfR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomImageView" destination="LHf-Tz-S4p" id="33M-Oz-x7t"/>
+                        <outlet property="centerImageView" destination="OnJ-pW-B0z" id="GT6-7x-Y0O"/>
+                        <outlet property="topImageView" destination="eJW-Cx-too" id="aPs-DG-vDR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xcode-icon-red" width="512" height="512"/>
+    </resources>
+</document>
