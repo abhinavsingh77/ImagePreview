@@ -56,6 +56,7 @@
     self.maximumWidthAllowed = ([UIScreen mainScreen].bounds.size.width - 20);
     self.maximumHeightAllowed = ([UIScreen mainScreen].bounds.size.height - 100);
     
+    self.removeOnPinch = YES;
     self.removeOnTap = YES;
 }
 
@@ -82,16 +83,14 @@
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
     scrollView.contentSize = self.bounds.size;
     [scrollView setMaximumZoomScale:self.maximumZoomScale];
-    
-    if (!self.removeOnTap) {
-        // :)
-        [scrollView setMinimumZoomScale:(self.minimumZoomScale-0.1)];
-    }
-    
     scrollView.delegate = self;
     scrollView.autoresizingMask = (UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth);
     [self addSubview:scrollView];
     
+    if (self.removeOnPinch) {
+        // i know :)
+        [scrollView setMinimumZoomScale:(self.minimumZoomScale-0.1)];
+    }
     if (self.removeOnTap) {
         
         UITapGestureRecognizer *tapToClose = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
@@ -214,14 +213,17 @@
     return imageView;
 }
 
--(void)scrollViewDidZoom:(UIScrollView *)scrollView {
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
     
-    imageView.center = CGPointMake(scrollView.frame.size.width/2, scrollView.frame.size.height/2);
+    CGRect rect = imageView.frame;
+    rect.origin.x = MAX(0, ((scrollView.bounds.size.width - rect.size.width)/2));
+    rect.origin.y = MAX(0, ((scrollView.bounds.size.height - rect.size.height)/2));
+    imageView.frame = rect;
 }
 
 -(void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
     
-    if ((scale < self.minimumZoomScale) && !self.removeOnTap) {
+    if ( self.removeOnPinch && (scale < self.minimumZoomScale) ) {
         
         [self dismiss];
     }

@@ -21,6 +21,9 @@
 @property(nonatomic, assign) CGFloat animationDuration;
 
 @property(nonatomic, assign) BOOL removeOnTap;
+@property(nonatomic, assign) BOOL removeOnPinch;
+
++(LSTImagePreviewView*)defaultPreviewView;
 
 -(void)showPreviewForImageView:(UIImageView *)imageV;
 
